@@ -8,6 +8,25 @@ message Header {
     uint64 client_id = 2;
 }
 
+message Key {
+    optional string shardkey = 1;
+    string key = 2;
+}
+
+message Record {
+    Key key = 1;
+    optional string value = 2;
+}
+
+enum Code {
+    Ok = 0;
+}
+
+message Status {
+    Code code = 1;
+    string msg = 2;
+}
+
 message GetRequest {
     optional Header header = 1;
     
@@ -15,17 +34,22 @@ message GetRequest {
     repeated Key keys = 3;
 }
 
-message Key {
-    optional string shardkey = 1;
-    string key = 2;
-}
-
-message Pair {
-    Key key = 1;
-    optional string value = 2;
-}
-
 message GetResponse {
     optional Header header = 1;
-    repeated Pair pairs = 2;
+    Status status = 2;
+
+    repeated Record records = 3;
+}
+
+message PutRequest {
+    optional Header header = 1;
+    repeated Record records = 2;
+}
+
+message PutResponse {
+    optional Header header = 1;
+    Status status = 2;
+
+    repeated Status kv_status = 3;
+    repeated Record records = 4;
 }
