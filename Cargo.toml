@@ -46,6 +46,13 @@ tokio = { version = "1.6.0", features = ["full"] }
 toml = "0.5.8"
 warp = "0.3.1"
 
+nng-sys = { version = "1.4.0-rc", features = ["build-bindgen"] }
+prost = "0.8.0"
+
+
 [profile.release]
 debug = true
 lto = true
+
+[build-dependencies]
+prost-build = "0.8.0"
