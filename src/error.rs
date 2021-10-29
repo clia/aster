@@ -11,6 +11,5 @@ pub enum AsError {
         backtrace: Backtrace,
     },
     #[error("fail to proxy ")]
-    ProxyFail {
-    }
+    ProxyFail {},
 }
