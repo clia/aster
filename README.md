@@ -41,10 +41,10 @@ sudo systemctl start rcproxy
 
 ```Toml
 [log]
-level = "info" # "trace" "info" "debug" "warn" "error"
+level = "libaster=info" # "trace" "info" "debug" "warn" "error"
 ansi = true  # support ANSI colors
 stdout = false # print logs to stdout
-directory = "./logs" # log file directory
+directory = "/var/log/rcproxy" # log file directory
 file_name = "rcproxy.log" # log file name
 
 
