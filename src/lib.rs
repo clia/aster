@@ -81,6 +81,10 @@ pub fn run() -> Result<(), Error> {
         !cfg.log.file_name.is_empty(),
         "log file_name is absent of config file"
     );
+    assert!(
+        cfg.metrics.port == 0,
+        "metrics port is absent of config file"
+    );
     crate::proxy::standalone::reload::init(&watch_file, cfg.clone(), enable_reload)?;
 
     let _guard = init_tracing(
