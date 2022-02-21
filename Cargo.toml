@@ -60,17 +60,11 @@ sysinfo =  "0.9.5"
 rayon = "1.2.0"
 hotwatch = "0.4.3"
 chrono = "0.4.15"
-tracing = { git = "https://github.com/clia/tracing.git", branch = "v0.1.x" }
-tracing-subscriber = { git = "https://github.com/clia/tracing.git", branch = "v0.1.x", features = ["std", "fmt", "env-filter", "tracing-log", "time", "local-time"] }
-tracing-appender = { git = "https://github.com/clia/tracing.git", branch = "v0.1.x" }
-tracing-log = { git = "https://github.com/clia/tracing.git", branch = "v0.1.x", features = ["log-tracer"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3.9", features = ["std", "fmt", "env-filter", "tracing-log", "time", "local-time"] }
+clia-tracing-appender = "0.2.0"
+tracing-log = { version = "0.1.2", features = ["log-tracer"] }
 time = { version = "0.3", features = ["macros", "local-offset"] }
-
-[patch.crates-io]
-tracing = { git = "https://github.com/clia/tracing.git", branch = "v0.1.x" }
-tracing-subscriber = { git = "https://github.com/clia/tracing.git", branch = "v0.1.x" }
-tracing-appender = { git = "https://github.com/clia/tracing.git", branch = "v0.1.x" }
-tracing-log = { git = "https://github.com/clia/tracing.git", branch = "v0.1.x" }
 
 [profile.release]
 debug = true

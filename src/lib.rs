@@ -35,7 +35,7 @@ use failure::Error;
 use com::meta::{load_meta, meta_init};
 use com::ClusterConfig;
 use metrics::thread_incr;
-use tracing_appender::non_blocking::WorkerGuard;
+use clia_tracing_appender::non_blocking::WorkerGuard;
 use tracing_subscriber::fmt::time::OffsetTime;
 use time::macros::format_description;
 use time::UtcOffset;
@@ -145,8 +145,8 @@ fn init_tracing(
     directory: &str,
     file_name: &str,
 ) -> WorkerGuard {
-    let file_appender = tracing_appender::rolling::hourly(directory, file_name, true, true);
-    let (file_writer, guard) = tracing_appender::non_blocking(file_appender);
+    let file_appender = clia_tracing_appender::rolling::hourly(directory, file_name, true, true);
+    let (file_writer, guard) = clia_tracing_appender::non_blocking(file_appender);
 
     let offset = UtcOffset::current_local_offset().expect("should get local offset!");
     let timer = OffsetTime::new(
