@@ -127,8 +127,9 @@ pub fn run() -> Result<(), Error> {
     }
 
     {
-        let port_str = matches.value_of("metrics").unwrap_or("2110");
-        let port = port_str.parse::<usize>().unwrap_or(2110);
+        // let port_str = matches.value_of("metrics").unwrap_or("2110");
+        // let port = port_str.parse::<usize>().unwrap_or(2110);
+        let port = cfg.metrics.port;
         spawn_metrics(port);
     }
 

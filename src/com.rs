@@ -154,6 +154,9 @@ pub struct Config {
     pub log: LogConfig,
     
     #[serde(default)]
+    pub metrics: MetricsConfig,
+    
+    #[serde(default)]
     pub clusters: Vec<ClusterConfig>,
 }
 
@@ -215,6 +218,11 @@ pub struct LogConfig {
     pub stdout: bool,
     pub directory: String,
     pub file_name: String,
+}
+
+#[derive(Clone, Debug, Deserialize, Default)]
+pub struct MetricsConfig {
+    pub port: usize,
 }
 
 #[derive(Deserialize, Debug, Clone, Copy)]

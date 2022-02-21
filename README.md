@@ -47,6 +47,8 @@ stdout = false # print logs to stdout
 directory = "/var/log/rcproxy" # log file directory
 file_name = "rcproxy.log" # log file name
 
+[metrics]
+port = 2110
 
 [[clusters]]
 # name of the cluster. Each cluster means one front-end port.
