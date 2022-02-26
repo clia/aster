@@ -2,6 +2,8 @@
 
 RCProxy [![LOC](https://tokei.rs/b1/github/clia/rcproxy)](https://github.com/clia/rcproxy)
 
+New repo: [https://github.com/clia/rcproxy](https://github.com/clia/rcproxy)
+
 ======================
 
 RCProxy is a lightweight, fast but powerful Redis Cluster Proxy written in Rust.
