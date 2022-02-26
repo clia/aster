@@ -1,8 +1,8 @@
 # RCProxy
 
-RCProxy [![LOC](https://tokei.rs/b1/github/clia/rcproxy)](https://github.com/clia/rcproxy)
-
 New repo: [https://github.com/clia/rcproxy](https://github.com/clia/rcproxy)
+
+RCProxy [![LOC](https://tokei.rs/b1/github/clia/rcproxy)](https://github.com/clia/rcproxy)
 
 ======================
 
